@@ -17,7 +17,7 @@ export class AppComponent {
     nombre: "Rodrigo",
     clave: 151807,
     edad: 20,
-    direccion{
+    direccion:{
       calle: "Insurgentes",
       numero: "1678",
       colonia: "Lindavista"
