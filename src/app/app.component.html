@@ -33,10 +33,62 @@
         <td>{{nombre | slice:2:5}}</td>
       </tr>
       <tr><!--Corta el numero de posiciónes especificadas en el parámetro de strings y arreglos -->
-        <td>{{nombre}}</td>
+        <td>{{arreglo}}</td>
         <td>slice:1:5</td>
         <td>{{arreglo | slice:1:5}}</td>
       </tr> 
+      <tr><!--Number sirve para mostrar que tantos decimales o numeros enteros se quieren, el formato de
+      entrada es siempre una string que es 'numerosEnteros.numerosDecimales-maximosDecimales'-->
+        <td>{{pi}}</td>
+        <td>number:'3.0-0'</td>
+        <td>{{pi | number:'3.0-0'}}</td>
+      </tr> 
+      <tr>
+        <td>{{pi}}</td>
+        <td>number:'1.5-0'</td>
+        <td>{{pi | number:'1.5-6'}}</td>
+      </tr>
+      <tr><!--Sirve para ponerle porciento a las cosas, si no se le agrega formato lo redondea-->
+        <td>{{a}}</td>
+        <td>percent</td>
+        <td>{{a | percent}}</td>
+      </tr>
+      <tr><!--Sirve para ponerle porciento a las cosas, se le puede agregar formato igual que a number-->
+        <td>{{a}}</td>
+        <td>percent:'2.2-2'</td>
+        <td>{{a | percent:'2.2-2'}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, sino se especifica nada se pondrán dolares-->
+        <td>{{moneda}}</td>
+        <td>currency</td>
+        <td>{{moneda | currency}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, se especifica con strings el cóodigo-->
+        <td>{{moneda}}</td>
+        <td>currency:'EUR'</td>
+        <td>{{moneda | currency:'EUR'}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, para que solo salga el texto de la divisa-->
+        <td>{{moneda}}</td>
+        <td>currency:'EUR':'symbol'</td>
+        <td>{{moneda | currency:'EUR':'symbol'}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, para que solo salga el texto de la divisa-->
+        <td>{{moneda}}</td>
+        <td>currency:'EUR':'code'</td>
+        <td>{{moneda | currency:'EUR':'code'}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, Se puede decidir cuantos dígitos mostrar-->
+        <td>{{moneda}}</td>
+        <td>currency:'EUR':'symbol':'4.2-2'</td>
+        <td>{{moneda | currency:'EUR':'symbol':'4.2-2'}}</td>
+      </tr>
+      <tr><!--Para darle formato de moneda siguiendo el ISO 4217, Se puede decidir cuantos dígitos mostrar-->
+        <td>{{moneda}}</td>
+        <td>currency:'EUR':'code':'4.2-2'</td>
+        <td>{{moneda | currency:'EUR':'code':'4.2-2'}}</td>
+      </tr>
+      
     </tbody>
   </table>
 
@@ -47,5 +99,10 @@
       {{item}}
     </li>
   </ul>
+
+  <h4>JSON</h4>
+  <pre><!--La etiqueta pre es de bootstrap para acomodar el formato-->
+    {{persona | json}}
+  </pre>
 </div>
 
