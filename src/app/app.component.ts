@@ -23,4 +23,6 @@ export class AppComponent {
       colonia: "Lindavista"
     }
   };
+  fecha = new Date();
+  nombre2 = "juAn rOdrIgo martInEZ pLasCenciA";
 }

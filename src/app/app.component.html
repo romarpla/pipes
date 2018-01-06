@@ -88,7 +88,29 @@
         <td>currency:'EUR':'code':'4.2-2'</td>
         <td>{{moneda | currency:'EUR':'code':'4.2-2'}}</td>
       </tr>
-      
+      <tr><!--Sirve para darle fortmato a las fechas y tiene muchas variaciones, checar documentación de 
+        angular para ver todas las opciones-->
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr><!--Sirve para darle fortmato a las fechas y tiene muchas variaciones, checar documentación de 
+        angular para ver todas las opciones-->
+        <td>{{fecha}}</td>
+        <td>date:'medium'</td>
+        <td>{{fecha | date:'medium'}}</td>
+      </tr>
+      <tr><!--Sirve para darle fortmato a las fechas y tiene muchas variaciones, checar documentación de 
+        angular para ver todas las opciones, también se puede personalizar el formato-->
+        <td>{{fecha}}</td>
+        <td>date:'MMMM - dd'</td>
+        <td>{{fecha | date:'MMMM - dd'}}</td>
+      </tr> 
+      <tr>
+        <td>{{nombre2}}</td>
+        <td>capitalizado</td>
+        <td>{{nombre2 | capitalizado}}</td>
+      </tr>     
     </tbody>
   </table>
 
