@@ -24,5 +24,7 @@ export class AppComponent {
     }
   };
   fecha = new Date();
-  nombre2 = "juAn rOdrIgo martInEZ pLasCenciA";
+  nombre2:string = "juAn rOdrIgo martInEZ pLasCenciA";
+  video:string = '6vPNvrro1TM';
+  activar:boolean = true;
 }
